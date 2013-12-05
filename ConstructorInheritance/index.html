@@ -10,12 +10,11 @@
 	<div class="node-2"></div>
 	<div id="console"></div>
 	<script>
-	var node1 = document.getElementsByClassName("node-1")[0];
-	var node2 = document.getElementsByClassName("node-2")[0];
-	var console = document.getElementById("console");
-
-	var rectangle = new Rectangle(20,50);
-	var square = new Square(30);
+	var node1 = document.getElementsByClassName("node-1")[0],
+	    node2 = document.getElementsByClassName("node-2")[0],
+	    console = document.getElementById("console"),
+	    rectangle = new Rectangle(20,50),
+	    square = new Square(30);
 	    
 	    node1.innerHTML = rectangle.toString() + ' is ' + rectangle.getArea();
 	    node2.innerHTML = square.toString() + ' is ' + square.getArea();
@@ -26,8 +25,7 @@
         consoleMessage += 'rectangle instance of Square: ' + (rectangle instanceof Square) + '<br>';
         consoleMessage += 'square instance of Object: ' + (square instanceof Object);
 
-
-	    console.innerHTML = consoleMessage;
+        console.innerHTML = consoleMessage;
 
 
 	</script>
