@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Constructor Inheritance</title>
+	<script type="text/javascript" src="Rectangle.js"></script>
+    <script type="text/javascript" src="Square.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="node-1"></div>
+	<div class="node-2"></div>
+	<div id="console"></div>
+	<script>
+	var node1 = document.getElementsByClassName("node-1")[0];
+	var node2 = document.getElementsByClassName("node-2")[0];
+	var console = document.getElementById("console");
+
+	var rectangle = new Rectangle(20,50);
+	var square = new Square(30);
+	    
+	    node1.innerHTML = rectangle.toString() + ' is ' + rectangle.getArea();
+	    node2.innerHTML = square.toString() + ' is ' + square.getArea();
+
+        consoleMessage = 'rectangle instance of Rectangle: ' + (rectangle instanceof Rectangle) + '<br>';
+        consoleMessage += 'square instance of Rectangle: ' + (square instanceof Rectangle) + '<br>';
+        consoleMessage += 'square instance of Square: ' + (square instanceof Square) + '<br>';
+        consoleMessage += 'rectangle instance of Square: ' + (rectangle instanceof Square) + '<br>';
+        consoleMessage += 'square instance of Object: ' + (square instanceof Object);
+
+
+	    console.innerHTML = consoleMessage;
+
+
+	</script>
+</body>
+</html>
