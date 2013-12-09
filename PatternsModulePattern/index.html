@@ -2,6 +2,8 @@
 <head>
   <title>Patterns - Module Pattern</title>
   <script type="text/javascript" src="person.js"></script>
+  <script type="text/javascript" src="PersonConstructor.js"></script>
+
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -13,10 +15,14 @@
       node2 = document.getElementsByClassName("node-2")[0],
       console = document.getElementById("console");
 
-      node2.innerHTML = person.name + ' is ' + person.age + ' before invoking growOlder Method';
+      node1.innerHTML = person.name + ' is ' + person.age + ' before invoking growOlder Method';
       person.growOlder();
 
       console.innerHTML = person.name + ' is ' + person.age + ' after invoking growOlder' ;
+
+      var person = new Person("Miguelito");
+      person.growOlder();
+      node2.innerHTML = person.name +' as a controctor is ' + person.age ;
 
 	</script>
 </body>
