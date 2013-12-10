@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Patterns - Module Pattern</title>
+  <script type="text/javascript" src="person.js"></script>
+  <script type="text/javascript" src="PersonConstructor.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="node-1"></div>
+  <div class="node-2"></div>
+  <div id="console"></div>
+	<script>
+  var node1 = document.getElementsByClassName("node-1")[0],
+      node2 = document.getElementsByClassName("node-2")[0],
+      console = document.getElementById("console");
+
+      var person = new Person("Miguelito");
+      var person2 = new Person("Carlitos");
+
+      person.growOlder();
+      person2.growOlder();
+
+      node1.innerHTML = person.name +' as a controctor is ' + person.age ;
+      node2.innerHTML = person2.name +' as a controctor is ' + person2.age ;
+
+	</script>
+</body>
+</html>
